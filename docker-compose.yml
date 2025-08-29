@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  # Base PostgreSQL
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydb
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # Interface web pour la DB
+  adminer:
+    image: adminer
+    container_name: adminer_ui
+    restart: always
+    ports:
+      - "8081:8080"
+
+  # Tomcat avec l'application
+  tomcat:
+    build: .
+    container_name: tomcat_app
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    volumes:
+      # On monte le WAR généré par Maven
+      - ./target/jakarta-tomcat-app.war:/usr/local/tomcat/webapps/jakarta-tomcat-app.war
+
+volumes:
+  pgdata:
