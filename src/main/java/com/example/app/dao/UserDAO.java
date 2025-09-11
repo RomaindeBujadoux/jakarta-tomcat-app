@@ -1,6 +1,6 @@
 package com.example.app.dao;
 
-import com.example.app.model.User;
+import com.example.app.entity.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
