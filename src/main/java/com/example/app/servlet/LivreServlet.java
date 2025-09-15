@@ -31,6 +31,6 @@ public class LivreServlet extends HttpServlet {
         if (name != null && !name.isEmpty()) {
             userDAO.save(new Livre(name));
         }
-        resp.sendRedirect(req.getContextPath() + "/livre");
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
 }

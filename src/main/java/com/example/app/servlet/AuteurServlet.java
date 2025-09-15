@@ -23,7 +23,7 @@ public class AuteurServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Auteur> auteurs = userDAO.findAll();
         req.setAttribute("auteurs", auteurs);
-        req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        req.getRequestDispatcher("/auteur/list.jsp").forward(req, resp);
     }
 
     // POST = ajouter un utilisateur
@@ -33,6 +33,6 @@ public class AuteurServlet extends HttpServlet {
         if (name != null && !name.isEmpty()) {
             userDAO.save(new Auteur(name));
         }
-        resp.sendRedirect(req.getContextPath() + "/auteur");
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
 }

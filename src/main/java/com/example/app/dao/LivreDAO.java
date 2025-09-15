@@ -15,6 +15,7 @@ public class LivreDAO {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(livre); // INSERT INTO livres
+
         em.getTransaction().commit();
         em.close();
     }

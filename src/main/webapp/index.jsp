@@ -9,10 +9,10 @@
 <body class="container py-4">
 <div class="d-flex justify-content-around">
     <h2>Biblio Jakarta</h2>
-    <form method="post" action="livre" class="mb-4">
+    <form method="post" action="livre/form.jsp" class="mb-4">
         <button type="submit" class="btn btn-primary">Ajouter Livre</button>
     </form>
-    <form method="post" action="auteur" class="mb-4">
+    <form method="post" action="auteur/form.jsp" class="mb-4">
         <button type="submit" class="btn btn-primary">Ajouter Auteur</button>
     </form>
 </div>
