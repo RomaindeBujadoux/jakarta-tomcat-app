@@ -13,11 +13,6 @@ import java.util.List;
 // Servlet contrôleur MVC
 @WebServlet("/livre")
 public class LivreServlet extends HttpServlet {
-	
-	// Identifiant de version de sérialisation généré manuellement.
-	// Recommandé pour toutes les classes qui héritent de HttpServlet (implémente Serializable).
-	// Cela permet d’éviter des incompatibilités lors de la désérialisation si la classe évolue.
-	private static final long serialVersionUID = 1L;
 
     private final LivreDAO userDAO = new LivreDAO();
 
@@ -36,6 +31,6 @@ public class LivreServlet extends HttpServlet {
         if (name != null && !name.isEmpty()) {
             userDAO.save(new Livre(name));
         }
-        resp.sendRedirect(req.getContextPath() + "/livres");
+        resp.sendRedirect(req.getContextPath() + "/livre");
     }
 }

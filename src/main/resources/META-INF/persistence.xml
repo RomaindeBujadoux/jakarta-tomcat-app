@@ -10,7 +10,7 @@
 
         <!-- Classe entité -->
         <class>com.example.app.entity.Livre</class>
-
+        <class>com.example.app.entity.Auteur</class>
         <!-- Connexion à PostgreSQL (via Docker Compose) -->
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>

@@ -3,6 +3,8 @@ package com.example.app.entity;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 // Entité JPA représentant un utilisateur
 @Entity
@@ -14,6 +16,12 @@ public class Auteur implements Serializable {
     private Long id;
 
     private String name;
+    private String nom;
+    private String prenom;
+    private String nationalite;
+
+    @OneToMany
+    private List<Livre> titre = new ArrayList<>();
 
     public Auteur () {}
 
@@ -42,5 +50,4 @@ public class Auteur implements Serializable {
     public String toString() {
         return "Auteur [id=" + id + ", name=" + name + "]";
     }
-
 }

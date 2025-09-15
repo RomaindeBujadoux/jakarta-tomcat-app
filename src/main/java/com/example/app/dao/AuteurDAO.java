@@ -15,7 +15,7 @@ public class AuteurDAO {
     public void save(Auteur auteur) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        em.persist(auteur); // INSERT INTO users
+        em.persist(auteur); // INSERT INTO auteurs
         em.getTransaction().commit();
         em.close();
     }

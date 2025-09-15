@@ -14,11 +14,7 @@ import java.util.List;
 // Servlet contrôleur MVC
 @WebServlet("/auteur")
 public class AuteurServlet extends HttpServlet {
-	
-	// Identifiant de version de sérialisation généré manuellement.
-	// Recommandé pour toutes les classes qui héritent de HttpServlet (implémente Serializable).
-	// Cela permet d’éviter des incompatibilités lors de la désérialisation si la classe évolue.
-	private static final long serialVersionUID = 1L;
+
 
     private final AuteurDAO userDAO = new AuteurDAO();
 

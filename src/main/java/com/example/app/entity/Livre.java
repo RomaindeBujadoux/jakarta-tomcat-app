@@ -3,8 +3,9 @@ package com.example.app.entity;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Date;
 
-// Entité JPA représentant un utilisateur
+// Entité JPA représentant un livre
 @Entity
 @Table(name = "livres")
 public class Livre implements Serializable {
@@ -14,6 +15,11 @@ public class Livre implements Serializable {
     private Long id;
 
     private String name;
+    private String isbn;
+    private Date datePublication;
+
+    @ManyToOne
+    private Auteur auteur;
 
     public Livre () {}
 
@@ -25,13 +31,13 @@ public class Livre implements Serializable {
     public Long getId() {
         return id;
     }
-    public String getName() {
+    public String getName () {
         return name;
     }
-    public void setId(long id){
-        this.id=id;
+    public void setId(Long id){
+        this.id = id;
     }
-    public void setName(String name) {
+    public void setName (String name) {
         this.name = name;
     }
 
