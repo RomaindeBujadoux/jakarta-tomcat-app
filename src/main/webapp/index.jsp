@@ -12,8 +12,14 @@
     <form method="post" action="livre/form.jsp" class="mb-4">
         <button type="submit" class="btn btn-primary">Ajouter Livre</button>
     </form>
+    <form method="get" action="livre/list.jsp" class="mb-4">
+        <button type="submit" class="btn btn-primary">Liste Livres</button>
+    </form>
     <form method="post" action="auteur/form.jsp" class="mb-4">
         <button type="submit" class="btn btn-primary">Ajouter Auteur</button>
+    </form>
+    <form method="get" action="auteur/list.jsp" class="mb-4">
+        <button type="submit" class="btn btn-primary">Liste Auteurs</button>
     </form>
 </div>
 
