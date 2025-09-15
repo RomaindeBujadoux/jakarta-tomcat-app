@@ -12,7 +12,7 @@
     <form method="post" action="livre/form.jsp" class="mb-4">
         <button type="submit" class="btn btn-primary">Ajouter Livre</button>
     </form>
-    <form method="get" action="livre/list.jsp" class="mb-4">
+    <form method="get" action="livre" class="mb-4">
         <button type="submit" class="btn btn-primary">Liste Livres</button>
     </form>
     <form method="post" action="auteur/form.jsp" class="mb-4">
@@ -38,7 +38,7 @@
                     ${livre.auteur}
             </td>
             <td>
-                    ${livre.name}
+                    ${livre.titre}
             </td>
             <td>
                 <button>Editer</button>
