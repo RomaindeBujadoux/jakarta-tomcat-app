@@ -1,20 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<!-- Page JSP simple affichant la liste des utilisateurs et un formulaire d'ajout -->
+<!-- Page affichant la liste des livres de la bibliotheque -->
 <html>
-<head><title>Users</title></head>
+<head>
+    <title>Jakarta Biblio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
 <body>
-<h2>Add User</h2>
-<form method="post" action="users">
-    <input type="text" name="name" placeholder="Name"/>
-    <button type="submit">Save</button>
+<h2>Ajouter un livre</h2>
+<form method="post" action="livre">
+    <input type="text" name="titre" placeholder="Titre"/>
+    <input type="text" name="auteur" placeholder="Auteur"/>
+    <button type="submit">Enregistrer</button>
 </form>
 
-<h2>User List</h2>
-<ul>
-    <c:forEach var="user" items="${users}">
-        <li>${user.name}</li>
+<h2>Liste des livres</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Livre</th>
+            <th>Auteur</th>
+        </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="livre" items="${livre}">
+        <tr>
+            <td>${livre.titre}</td>
+            <td>${livre.auteur}</td>
+        </tr>
     </c:forEach>
-</ul>
+    </tbody>
+</table>
 </body>
 </html>

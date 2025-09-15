@@ -9,7 +9,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <!-- Classe entité -->
-        <class>com.example.app.entity.User</class>
+        <class>com.example.app.entity.Livre</class>
 
         <!-- Connexion à PostgreSQL (via Docker Compose) -->
         <properties>

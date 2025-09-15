@@ -1,7 +1,7 @@
 package com.example.app.servlet;
 
-import com.example.app.dao.UserDAO;
-import com.example.app.entity.User;
+import com.example.app.dao.LivreDAO;
+import com.example.app.entity.Livre;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -11,21 +11,21 @@ import java.io.IOException;
 import java.util.List;
 
 // Servlet contrôleur MVC
-@WebServlet("/users")
-public class UserServlet extends HttpServlet {
+@WebServlet("/livre")
+public class LivreServlet extends HttpServlet {
 	
 	// Identifiant de version de sérialisation généré manuellement.
 	// Recommandé pour toutes les classes qui héritent de HttpServlet (implémente Serializable).
 	// Cela permet d’éviter des incompatibilités lors de la désérialisation si la classe évolue.
 	private static final long serialVersionUID = 1L;
 
-    private final UserDAO userDAO = new UserDAO();
+    private final LivreDAO userDAO = new LivreDAO();
 
     // GET = afficher la liste
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<User> users = userDAO.findAll();
-        req.setAttribute("users", users);
+        List<Livre> livres = userDAO.findAll();
+        req.setAttribute("livres", livres);
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 
@@ -34,8 +34,8 @@ public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String name = req.getParameter("name");
         if (name != null && !name.isEmpty()) {
-            userDAO.save(new User(name));
+            userDAO.save(new Livre(name));
         }
-        resp.sendRedirect(req.getContextPath() + "/users");
+        resp.sendRedirect(req.getContextPath() + "/livres");
     }
 }
