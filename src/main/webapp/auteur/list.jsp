@@ -14,10 +14,17 @@
 </head>
 <body>
 	<h1>Liste des auteurs</h1>
-	<c:forEach var="livre" items="${auteurs}">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Auteur</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<c:forEach var="auteur" items="${auteurs}">
         <tr>
             <td>
-                    ${auteur.nom}
+                    ${auteur}
             </td>
             <td>
                 <button>Editer</button>
@@ -26,6 +33,8 @@
                 <button>Supprimer</button>
             </td>
         </tr>
-    </c:forEach>
+    	</c:forEach>
+    </tbody>
+</table>
 </body>
 </html>

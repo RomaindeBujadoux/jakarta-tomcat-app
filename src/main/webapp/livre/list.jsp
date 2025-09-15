@@ -13,11 +13,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-<h1>Liste de livres</h1>
-	<c:forEach var="livre" items="${livres}">
+	<h1>Liste de livres</h1>
+	<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Livre</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<c:forEach var="livre" items="${livres}">
         <tr>
             <td>
-                    ${livre.nom}
+                    ${livre}
             </td>
             <td>
                 <button>Editer</button>
@@ -26,6 +33,8 @@
                 <button>Supprimer</button>
             </td>
         </tr>
-    </c:forEach>
+    	</c:forEach>
+    </tbody>
+	</table>
 </body>
 </html>
