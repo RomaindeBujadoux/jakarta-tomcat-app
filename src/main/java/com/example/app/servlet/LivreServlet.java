@@ -24,13 +24,13 @@ public class LivreServlet extends HttpServlet {
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 
-    // POST = ajouter un utilisateur
+    // POST = ajouter un livre
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String name = req.getParameter("name");
-        if (name != null && !name.isEmpty()) {
-            userDAO.save(new Livre(name));
+        String titre = req.getParameter("titre");
+        if (titre != null && !titre.isEmpty()) {
+            userDAO.save(new Livre(titre));
         }
-        resp.sendRedirect(req.getContextPath() + "/index.jsp");
+        resp.sendRedirect(req.getContextPath() + "/livre");
     }
 }

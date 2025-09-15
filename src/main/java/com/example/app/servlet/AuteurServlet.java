@@ -26,13 +26,13 @@ public class AuteurServlet extends HttpServlet {
         req.getRequestDispatcher("/auteur/list.jsp").forward(req, resp);
     }
 
-    // POST = ajouter un utilisateur
+    // POST = ajouter un auteur
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String name = req.getParameter("name");
-        if (name != null && !name.isEmpty()) {
-            userDAO.save(new Auteur(name));
+        String nom = req.getParameter("nom");
+        if (nom != null && !nom.isEmpty()) {
+            userDAO.save(new Auteur(nom));
         }
-        resp.sendRedirect(req.getContextPath() + "/index.jsp");
+        resp.sendRedirect(req.getContextPath() + "/auteur");
     }
 }
