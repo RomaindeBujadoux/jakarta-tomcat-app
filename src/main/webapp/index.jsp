@@ -32,7 +32,7 @@
                     ${livre.auteur}
             </td>
             <td>
-                    ${livre.name}
+                    ${livre.nom}
             </td>
             <td>
                 <button>Editer</button>

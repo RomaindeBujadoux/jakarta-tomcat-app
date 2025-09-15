@@ -14,7 +14,7 @@ public class Livre implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increment
     private Long id;
 
-    private String name;
+    private String titre;
     private String isbn;
     private Date datePublication;
 
@@ -23,25 +23,25 @@ public class Livre implements Serializable {
 
     public Livre () {}
 
-    public Livre (String name) {
-        this.name = name;
+    public Livre (String titre) {
+        this.titre = titre;
     }
 
     // Getters et Setters
     public Long getId() {
         return id;
     }
-    public String getName () {
-        return name;
+    public String getTitre () {
+        return titre;
     }
     public void setId(Long id){
         this.id = id;
     }
-    public void setName (String name) {
-        this.name = name;
+    public void setTitre (String titre) {
+        this.titre = titre;
     }
 
     public String toString() {
-        return "Livre [id=" + id + ", name=" + name + "]";
+        return "Livre [id=" + id + ", titre=" + titre + "]";
     }
 }

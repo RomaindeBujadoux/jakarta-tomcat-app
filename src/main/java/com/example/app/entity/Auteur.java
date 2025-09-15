@@ -15,7 +15,6 @@ public class Auteur implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increment
     private Long id;
 
-    private String name;
     private String nom;
     private String prenom;
     private String nationalite;
@@ -25,9 +24,9 @@ public class Auteur implements Serializable {
 
     public Auteur () {}
 
-    public Auteur (String name) {
+    public Auteur (String nom) {
 
-        this.name = name;
+        this.nom = nom;
     }
 
     // Getters et Setters
@@ -35,19 +34,19 @@ public class Auteur implements Serializable {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getNom () {
+        return nom;
     }
 
     public void  setId(Long id) {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNom (String nom) {
+        this.nom = nom;
     }
 
     public String toString() {
-        return "Auteur [id=" + id + ", name=" + name + "]";
+        return "Auteur [id=" + id + ", nom=" + nom + "]";
     }
 }

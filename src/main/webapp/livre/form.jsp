@@ -14,13 +14,13 @@
     <body>
         <form type="post" action="auteur">
             <label>Titre</label>
-            <input type="text" name="nom">
+            <input type="text" nom="nom">
             <label>Numero ISBN</label>
-            <input type="text" name="isbn">
+            <input type="text" nom="isbn">
             <label>Date de publication</label>
-            <input type="date" name="date">
+            <input type="date" nom="date">
             <label>Auteur</label>
-            <input type="text" name="auteur">
+            <input type="text" nom="auteur">
             <button type="submit">Valider</button>
         </form>
     </body>
