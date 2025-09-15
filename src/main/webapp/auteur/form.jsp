@@ -14,11 +14,11 @@
 <body>
 <form type="post" action="auteur">
     <label>Nom</label>
-    <input type="text" name="nom">
+    <input type="text" nom="nom">
     <label>Prenom</label>
-    <input type="text" name="prenom">
+    <input type="text" nom="prenom">
     <label>Nationalité</label>
-    <input type="text" name="nationalite">
+    <input type="text" nom="nationalite">
     <button type="submit">Valider</button>
 </form>
 </body>

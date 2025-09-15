@@ -4,7 +4,7 @@
              version="3.0"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
-    <persistence-unit name="myPU" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit nom="myPU" transaction-type="RESOURCE_LOCAL">
         <!-- Fournisseur JPA -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
@@ -13,15 +13,15 @@
         <class>com.example.app.entity.Auteur</class>
         <!-- Connexion à PostgreSQL (via Docker Compose) -->
         <properties>
-            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://postgres:5432/mydb"/>
-            <property name="jakarta.persistence.jdbc.user" value="myuser"/>
-            <property name="jakarta.persistence.jdbc.password" value="mypassword"/>
+            <property nom="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property nom="jakarta.persistence.jdbc.url" value="jdbc:postgresql://postgres:5432/mydb"/>
+            <property nom="jakarta.persistence.jdbc.user" value="myuser"/>
+            <property nom="jakarta.persistence.jdbc.password" value="mypassword"/>
 
             <!-- Hibernate options -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.show_sql" value="true"/>
+            <property nom="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property nom="hibernate.hbm2ddl.auto" value="update"/>
+            <property nom="hibernate.show_sql" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>
