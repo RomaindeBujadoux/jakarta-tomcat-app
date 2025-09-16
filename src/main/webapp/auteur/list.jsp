@@ -12,29 +12,28 @@
     <title>Auteurs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
-	<h1>Liste des auteurs</h1>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Auteur</th>
-        </tr>
-    </thead>
-    <tbody>
-    	<c:forEach var="auteur" items="${auteurs}">
-        <tr>
-            <td>
-                    ${auteur}
-            </td>
-            <td>
-                <button>Editer</button>
-            </td>
-            <td>
-                <button>Supprimer</button>
-            </td>
-        </tr>
-    	</c:forEach>
-    </tbody>
-</table>
+<body class="container py-4">
+	<h1 class="mb-4">Liste des auteurs</h1>
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach var="auteur" items="${auteurs}">
+                    <tr>
+                        <td>${auteur.nom}</td>
+                        <td class="text-end">
+                            <button type="button" class="btn btn-sm btn-secondary" disabled>Editer</button>
+                            <button type="button" class="btn btn-sm btn-danger" disabled>Supprimer</button>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

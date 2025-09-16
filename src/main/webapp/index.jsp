@@ -38,7 +38,7 @@
                     ${livre}
             </td>
             <td>
-                    ${livre}
+
             </td>
             <td>
                 <button>Editer</button>

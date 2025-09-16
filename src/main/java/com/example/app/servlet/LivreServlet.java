@@ -21,7 +21,7 @@ public class LivreServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Livre> livres = userDAO.findAll();
         req.setAttribute("livres", livres);
-        req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        req.getRequestDispatcher("/livre/list.jsp").forward(req, resp);
     }
 
     // POST = ajouter un livre
