@@ -35,10 +35,10 @@
     <c:forEach var="livre" items="${livres}">
         <tr>
             <td>
-                    ${livre.auteur}
+                    ${livre}
             </td>
             <td>
-                    ${livre.titre}
+
             </td>
             <td>
                 <button>Editer</button>
