@@ -31,14 +31,41 @@ public class Livre implements Serializable {
     public Long getId() {
         return id;
     }
-    public String getTitre () {
-        return titre;
-    }
+
     public void setId(Long id){
         this.id = id;
     }
+
+    public String getTitre () {
+        return titre;
+    }
+
     public void setTitre (String titre) {
         this.titre = titre;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Date getDatePublication() {
+        return datePublication;
+    }
+
+    public void setDatePublication(Date datePublication) {
+        this.datePublication = datePublication;
+    }
+
+    public Auteur getAuteur() {
+        return auteur;
+    }
+
+    public void setAuteur(Auteur auteur) {
+        this.auteur = auteur;
     }
 
     public String toString() {

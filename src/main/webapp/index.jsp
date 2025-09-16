@@ -18,7 +18,7 @@
     <form method="post" action="auteur/form.jsp" class="mb-4">
         <button type="submit" class="btn btn-primary">Ajouter Auteur</button>
     </form>
-    <form method="get" action="auteur/list.jsp" class="mb-4">
+    <form method="get" action="auteur" class="mb-4">
         <button type="submit" class="btn btn-primary">Liste Auteurs</button>
     </form>
 </div>
